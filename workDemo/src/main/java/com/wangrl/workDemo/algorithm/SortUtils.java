@@ -5,14 +5,13 @@ public class SortUtils {
     public static void selectSort(){
         int length = data.length;
         for(int i = 0;i<length;i++){
-            int min = data[i];
             int minIndex = i;
             for(int j=i+1;j<length;j++){
-                if (data[j] < min){
-                    min = data[j];
+                if (data[j] < data[minIndex]){
                     minIndex = j;
                 }
             }
+            int min = data[minIndex];
             data[minIndex] = data[i];
             data[i] = min;
         }
